@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birds Gallery</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background-color: #98fb98;
+      border: 3px solid red;
+      border-radius: 10px;
+      text-align: center;
+      padding: 20px;
+    }
+    .card img {
+      width: 300px;
+      height: auto;
+      border-radius: 5px;
+    }
+    .card h2 {
+      margin: 15px 0 5px;
+    }
+    .card p {
+      margin: 5px 0 15px;
+    }
+    .card a button {
+      background-color: #008CBA;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .card a button:hover {
+      background-color: #005f6a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="text-align:center;">Birds Gallery</h1>
+
+  <div class="grid-container">
+
+   
+    <div class="card">
+      <img src="images/1.jpg" alt="Parrot" title="Parrot">
+      <h2>Parrot</h2>
+      <p>Parrots are colorful, intelligent birds known for their ability to mimic sounds.</p>
+      <a href="https://en.wikipedia.org/wiki/Parrot" target="_blank">
+        <button>Check more</button>
+      </a>
+    </div>
+
+    
+    <div class="card">
+      <img src="images/2.jpg" alt="Rooster" title="Rooster">
+      <h2>Rooster</h2>
+      <p>Roosters are adult male chickens famous for their crowing at dawn.</p>
+      <a href="https://en.wikipedia.org/wiki/Rooster" target="_blank">
+        <button>Check more</button>
+      </a>
+    </div>
+
+  
+    <div class="card">
+      <img src="images/3.jpg" alt="Eagle" title="Eagle">
+      <h2>Eagle</h2>
+      <p>Eagles are large birds of prey known for their keen eyesight and powerful flight.</p>
+      <a href="https://en.wikipedia.org/wiki/Eagle" target="_blank">
+        <button>Check more</button>
+      </a>
+    </div>
+
+  
+    <div class="card">
+      <img src="images/4.jpg" alt="Owl" title="Owl">
+      <h2>Owl</h2>
+      <p>Owls are nocturnal birds of prey with keen vision and silent flight.</p>
+      <a href="https://en.wikipedia.org/wiki/Owl" target="_blank">
+        <button>Check more</button>
+      </a>
+    </div>
+
+  </div>
+</body>
+</html>

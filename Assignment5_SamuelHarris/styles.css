@@ -1,0 +1,52 @@
+.outer-box {
+    background-color: #E6E6FA;
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+
+  .clock-container {
+    position: relative;
+    width: 300px;    
+    height: 300px;
+    margin: 0 auto;
+    background: url("images/clock.png") no-repeat center;
+    background-size: cover;
+  }
+  
+  
+  .hand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    
+    transform-origin: 0% 50%;
+  
+    
+    width: 100px;
+    height: auto;
+  }
+  
+  
+  .hour-hand {
+    transform: translate(0, -50%) rotate(-90deg);
+  }
+  
+  
+  .minute-hand {
+    animation: spinMinute 5s linear infinite;
+    transform: translate(0, -50%) rotate(0deg);
+  }
+  
+  
+  @keyframes spinMinute {
+    0% {
+      transform: translate(0, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(0, -50%) rotate(360deg);
+    }
+  }
