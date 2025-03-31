@@ -37,7 +37,7 @@ body {
   }
   
   .slide:nth-child(3) img {
-    width: 100%; /* Adjust this value to make the images larger */
+    width: 75%; /* Adjust this value to make the images larger */
     margin: 0 auto; /* Center the images */
     display: block;
   }
