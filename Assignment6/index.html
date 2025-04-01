@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Assignment 6 - Product Boxes & Modals</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="product-box">
+      <h2>Cereal</h2>
+      <p>A bowl of nutritious cereal.</p>
+      <img src="images/1.jpg" alt="Cereal">
+      <a href="#modal1" class="open-modal">Open modal Link</a>
+    </div>
+    <div class="product-box">
+      <h2>Red Apple</h2>
+      <p>Fresh, juicy, and delicious red apple.</p>
+      <img src="images/2.jpg" alt="Red Apple">
+      <a href="#modal2" class="open-modal">Open modal Link II</a>
+    </div>
+  </div>
+  <div id="modal1" class="modal">
+    <div class="modal-content blue">
+      <a href="#" class="close-modal">&times;</a>
+      <h2>Modal Window One</h2>
+      <p>Having cereal in the morning is an easy way to fill up before starting your day!</p>
+      <img src="images/1.jpg" alt="Cereal Image in Modal" style="width:200px;">
+    </div>
+  </div>
+  <div id="modal2" class="modal">
+    <div class="modal-content green">
+      <a href="#" class="close-modal">&times;</a>
+      <h2>Modal Window Two</h2>
+      <p>Apples give you more energy than a cup of coffee!</p>
+      <img src="images/2.jpg" alt="Red Apple Image in Modal" style="width:200px;">
+    </div>
+  </div>
+</body>
+</html>
