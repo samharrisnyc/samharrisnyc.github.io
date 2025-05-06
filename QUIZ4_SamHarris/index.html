@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Quiz 4</title>
+
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+  <style>
+    body { text-align:center; margin-top:50px; }
+    img  { width:250px; margin:0 10px; cursor:pointer; }
+  </style>
+</head>
+<body>
+
+  <!-- sounds -->
+  <audio id="catSound" src="meow.mp3"></audio>
+  <audio id="dogSound" src="bark.mp3"></audio>
+
+  <!-- pictures -->
+  <img id="catPic" src="cat.jpg" alt="Cat">
+  <img id="dogPic" src="dog.jpg" alt="Dog">
+
+  <script>
+    $(function () {
+      $('#catPic').click(function () {
+        $('#catSound')[0].currentTime = 0;
+        $('#catSound')[0].play();
+      });
+
+      $('#dogPic').click(function () {
+        $('#dogSound')[0].currentTime = 0;
+        $('#dogSound')[0].play();
+      });
+    });
+  </script>
+</body>
+</html>
