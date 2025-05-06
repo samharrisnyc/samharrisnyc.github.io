@@ -1,0 +1,338 @@
+/* General Page Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8e0; /* Lighter yellow background */
+}
+
+/* Wrapper */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f8e0;
+}
+.logo img {
+    width: 60px;
+    height: 60px;
+    animation: fadeIn 2s;
+    border-radius: 10px;
+    border: 1px solid #c9c976;
+}
+.titles {
+    margin-left: 20px;
+}
+.titles h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    color: #8a9a5b;
+    margin: 0;
+}
+.titles h2 {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    color: #8a9a5b;
+    margin: 5px 0;
+}
+.animated-title,
+.animated-subtitle {
+    animation: slideIn 2s;
+}
+
+/* Keyframes for Header Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@keyframes slideIn {
+    from { transform: translateX(-100px); opacity: 0; }
+    to   { transform: translateX(0); opacity: 1; }
+}
+
+/* Promo Banner */
+.promo-banner {
+    background-color: #d4af37;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+}
+.promo-banner strong {
+    color: black;
+}
+
+/* Hero Section & Slideshow */
+.hero {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+    height: 500px; /* Keep container dimensions as is */
+}
+
+.slideshow {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideShow 9s infinite;
+    background-color: #000; /* Background behind the images */
+}
+
+.slide1 {
+    animation-delay: 0s;
+    opacity: 1; 
+}
+.slide2 {
+    animation-delay: 3s;
+}
+.slide3 {
+    animation-delay: 6s;
+}
+
+/* Updated Slide Image Rule:
+   Using object-fit: cover along with a transform scale to zoom out the images.
+   Adjust scale(0.9) to a lower value (e.g., 0.8) to zoom further out. */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0.9);
+    transform-origin: center;
+    display: block;
+}
+
+/* Slideshow Keyframes */
+@keyframes slideShow {
+    0%, 32% { opacity: 1; }
+    33%, 100% { opacity: 0; }
+}
+
+/* Hero Text: shift closer to middle-left */
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    font-size: 1em;
+    color: #333;
+    max-width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Products and Gift Sets */
+.products,
+.gift-sets {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.products h2,
+.gift-sets h2 {
+    text-align: center;
+    color: #8a9a5b;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+.product-list,
+.gift-set-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.product,
+.gift-set {
+    width: calc(33.333% - 20px);
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+.product:hover,
+.gift-set:hover {
+    transform: translateY(-5px);
+}
+.product img,
+.gift-set img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.product p,
+.gift-set p {
+    padding: 10px 15px;
+    margin: 0;
+    color: #555;
+}
+
+/* ADD TO BAG Button */
+.add-to-bag {
+    display: block;
+    margin: 10px 15px 15px;
+    padding: 10px;
+    background-color: #8a9a5b;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+.add-to-bag:hover {
+    background-color: #6b7a3b;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.modal-content .close {
+    color: #aaa;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.modal-content .close:hover,
+.modal-content .close:focus {
+    color: black;
+}
+.modal-body p {
+    margin: 0 0 20px 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+.continue-shopping {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #8a9a5b;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #8a9a5b;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+.continue-shopping:hover {
+    background-color: #8a9a5b;
+    color: white;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.footer-info {
+    margin-bottom: 15px;
+}
+.footer-info p {
+    margin: 0;
+    font-size: 0.9em;
+}
+.social-media {
+    margin: 15px 0;
+}
+.social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+.social-media img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+}
+.social-media img:hover {
+    transform: scale(1.2);
+}
+.footer-name {
+    margin-top: 15px;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+/* Animations and Responsive */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slideIn {
+  from { transform: translateX(-100px); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .titles {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .hero-text {
+        left: 20px;
+        right: 20px;
+        max-width: none;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .product, .gift-set {
+        width: calc(50% - 20px);
+    }
+}
+@media (max-width: 480px) {
+    .product, .gift-set {
+        width: 100%;
+    }
+    .promo-banner {
+        font-size: 1em;
+    }
+    .titles h1 {
+        font-size: 1.8em;
+    }
+}
+
+/* Slideshow Keyframes */
+@keyframes slideShow {
+    0%, 32% { opacity: 1; }
+    33%, 100% { opacity: 0; }
+}

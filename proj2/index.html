@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>ET-710 Sales Webpage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Wrapper: Constrain overall content width -->
+  <div class="wrapper">
+
+    <!-- Header with Animated Logo and Titles -->
+    <header>
+      <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <div class="titles">
+        <h1 class="animated-title">Josefina Body Care Collection</h1>
+        <h2 class="animated-subtitle">Discover the exotic sensation of all seasons</h2>
+      </div>
+    </header>
+
+    <!-- Hero Section with Slideshow & Overlaid Text -->
+    <section class="hero">
+      <div class="promo-banner">
+        <p>Today Only! <strong>$5.99 INTO THE NIGHT BODY CARE</strong> Code: <strong>STARRYNIGHT</strong></p>
+      </div>
+      <div class="slideshow">
+        <!-- Slide 1 -->
+        <div class="slide slide1">
+          <img src="images/intro_img1.jpg" alt="Slide 1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide slide2">
+          <img src="images/intro_img2.jpg" alt="Slide 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide slide3">
+          <img src="images/intro_img3.jpg" alt="Slide 3">
+        </div>
+      </div>
+      <div class="hero-text">
+        <p>
+          A 100% natural, unique dry oil that nourishes the skin.
+          Enriched with nourishing herbs, specifically put together 
+          according to the Ayurvedic tradition for the Vata Dosha. 
+          With nourishing sweet almond oil and basil.
+        </p>
+      </div>
+    </section>
+
+    <!-- Single Products Section -->
+<section class="products">
+    <h2>Single Products</h2>
+    <div class="product-list">
+      <!-- Product 1 -->
+      <div class="product">
+        <img src="images/item1.png" alt="Product 1">
+        <p>Product 1 Description</p>
+        <!-- Add data attributes for name, image, and possibly description -->
+        <a 
+          href="#modal"
+          class="add-to-bag"
+          data-product="Product 1"
+          data-image="images/item1.png"
+          data-description="Product 1 Description"
+        >
+          ADD TO BAG
+        </a>
+      </div>
+      <!-- Product 2 -->
+      <div class="product">
+        <img src="images/item2.png" alt="Product 2">
+        <p>Product 2 Description</p>
+        <a 
+          href="#modal"
+          class="add-to-bag"
+          data-product="Product 2"
+          data-image="images/item2.png"
+          data-description="Product 2 Description"
+        >
+          ADD TO BAG
+        </a>
+      </div>
+      <!-- Product 3 -->
+      <div class="product">
+        <img src="images/item3.png" alt="Product 3">
+        <p>Product 3 Description</p>
+        <a 
+          href="#modal"
+          class="add-to-bag"
+          data-product="Product 3"
+          data-image="images/item3.png"
+          data-description="Product 3 Description"
+        >
+          ADD TO BAG
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+   <!-- Gift Sets Section -->
+<section class="gift-sets">
+    <h2>Gift Sets</h2>
+    <div class="gift-set-list">
+      <!-- Gift Set 1 -->
+      <div class="gift-set">
+        <img src="images/gift_set1.png" alt="Gift Set 1">
+        <p>Gift Set 1 Description</p>
+        <a href="#modal" class="add-to-bag" 
+           data-product="Gift Set 1"
+           data-image="images/gift_set1.png"
+           data-description="Gift Set 1 Description">
+           ADD TO BAG
+        </a>
+      </div>
+      <!-- Gift Set 2 -->
+      <div class="gift-set">
+        <img src="images/gift_set2.png" alt="Gift Set 2">
+        <p>Gift Set 2 Description</p>
+        <a href="#modal" class="add-to-bag" 
+           data-product="Gift Set 2"
+           data-image="images/gift_set2.png"
+           data-description="Gift Set 2 Description">
+           ADD TO BAG
+        </a>
+      </div>
+      <!-- Gift Set 3 (optional) -->
+      <div class="gift-set">
+        <img src="images/gift_set3.png" alt="Gift Set 3">
+        <p>Gift Set 3 Description</p>
+        <a href="#modal" class="add-to-bag" 
+           data-product="Gift Set 3"
+           data-image="images/gift_set3.png"
+           data-description="Gift Set 3 Description">
+           ADD TO BAG
+        </a>
+      </div>
+    </div>
+  </section>
+  
+
+   <!-- Modal Window for ADD TO BAG -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+      <a href="#" class="close">&times;</a>
+      <div class="modal-body">
+        <!-- Existing message text -->
+        <p id="modal-message"></p>
+  
+        <!-- New elements for product name & image -->
+        <img id="modal-product-image" src="" alt="Product Image" style="max-width: 150px; display: block; margin: 10px auto;">
+        <p id="modal-product-description" style="text-align: center; color: #666; font-size: 0.9em;"></p>
+  
+        <a href="#" class="continue-shopping">CONTINUE SHOPPING</a>
+      </div>
+    </div>
+  </div>
+  
+  </div> <!-- End .wrapper -->
+
+  <!-- Footer with Links and Social Media Icons -->
+  <footer>
+    <div class="footer-info">
+      <p>HELP | ACCOUNT | SUBSCRIBE | THE MEMBER CARE</p>
+    </div>
+    <div class="social-media">
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="images/icons/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="images/icons/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.pinterest.com" target="_blank">
+        <img src="images/icons/pin.png" alt="Pinterest">
+      </a>
+      <a href="https://www.twitter.com" target="_blank">
+        <img src="images/icons/twitter.png" alt="Twitter">
+      </a>
+      <a href="https://www.youtube.com" target="_blank">
+        <img src="images/icons/youtube.png" alt="YouTube">
+      </a>
+    </div>
+    <div class="footer-name">
+      <p>Your Full Name</p>
+    </div>
+  </footer>
+
+    <script>
+        // JavaScript for Modal Functionality
+        // Get references to modal elements
+const modal = document.getElementById("modal");
+const modalMessage = document.getElementById("modal-message");
+const closeBtn = document.querySelector(".modal .close");
+const addToBagButtons = document.querySelectorAll(".add-to-bag");
+const continueShopping = document.querySelector(".continue-shopping");
+
+// New references for product image & description in the modal
+const modalProductImage = document.getElementById("modal-product-image");
+const modalProductDescription = document.getElementById("modal-product-description");
+
+addToBagButtons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Grab the data attributes from the clicked button
+    const productName = button.getAttribute("data-product");
+    const productImage = button.getAttribute("data-image");
+    const productDesc = button.getAttribute("data-description");
+
+    // Insert product name into the modal message
+    modalMessage.textContent = "Add " + productName + " to Shopping Cart";
+
+    // Update the modal image & description
+    modalProductImage.src = productImage;
+    modalProductImage.alt = productName; // for accessibility
+    modalProductDescription.textContent = productDesc;
+
+    // Show the modal
+    modal.style.display = "block";
+  });
+
+  // Hover effect: show tooltip & background color
+  button.addEventListener("mouseover", () => {
+    button.setAttribute("title", "Add to Shopping Cart");
+    button.style.backgroundColor = "gray";
+  });
+  button.addEventListener("mouseout", () => {
+    button.removeAttribute("title");
+    button.style.backgroundColor = "";
+  });
+});
+
+closeBtn.addEventListener("click", (e) => {
+  e.preventDefault(); // Prevent the default action that scrolls to the top
+  modal.style.display = "none";
+});
+
+
+// Close modal (Continue Shopping link)
+continueShopping.addEventListener("click", (e) => {
+  e.preventDefault();
+  modal.style.display = "none";
+});
+  </script>
+</body>
+</html>
