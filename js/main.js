@@ -32,17 +32,7 @@
     item.addEventListener("toggle", () => {
       if (!item.open) return;
       openItem(item);
-      history.replaceState(null, "", `#${item.id}`);
     });
   });
 
-  if (window.location.hash) {
-    const target = document.querySelector(window.location.hash);
-    if (target && target.matches("details.dir-item")) {
-      openItem(target);
-      requestAnimationFrame(() => {
-        target.scrollIntoView({ block: "start" });
-      });
-    }
-  }
 })();
