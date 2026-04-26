@@ -19,9 +19,9 @@
 
   <header class="site-header" role="banner">
     <div class="container">
-      <a class="brand" href="index.html" aria-label="Home">Samuel Harris</a>
+      <a class="brand" href="./" aria-label="Home">Samuel Harris</a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="index.html" aria-current="page">Projects</a>
+        <a href="./" aria-current="page">Projects</a>
         <a href="about.html">About</a>
         <a href="assets/docs/Samuel_Harris_Resume.pdf" target="_blank" rel="noopener">Resume</a>
       </nav>
@@ -53,135 +53,104 @@
           </div>
         </div>
 
-        <section class="featured-project" aria-labelledby="featured-project-title">
+        <section class="project-section selected-work" aria-labelledby="selected-projects-title">
           <div class="section-intro">
-            <p class="eyebrow">Featured Project</p>
-            <h2 id="featured-project-title" class="section-title">PDF Merge Tool</h2>
-            <p class="lede">A focused browser-based utility with a clear user task, local file handling, and a front-end workflow that feels practical instead of purely presentational.</p>
+            <p class="eyebrow">Projects</p>
+            <h2 id="selected-projects-title" class="section-title">Selected work.</h2>
+            <p class="lede">A compact view of the strongest pieces in the portfolio: utility work, data UI, and image-led presentation.</p>
           </div>
 
-          <div class="featured-project-card">
-            <a class="featured-project-media dir-panel-media" href="https://samharrisnyc.github.io/pdf-merge/" target="_blank" rel="noopener" aria-label="Open PDF Merge Tool live project">
-              <img src="assets/images/pdf-merge-preview.svg" width="1200" height="900" alt="PDF Merge Tool interface preview" loading="eager" decoding="async" fetchpriority="high">
-            </a>
+          <div class="work-browser" data-project-browser>
+            <div class="work-preview">
+              <article class="work-panel is-active" id="panel-pdf-merge" data-project-panel="pdf-merge" aria-labelledby="tab-pdf-merge">
+                <a class="work-media" href="https://samharrisnyc.github.io/pdf-merge/" target="_blank" rel="noopener" aria-label="Open PDF Merge Tool live project">
+                  <img src="assets/images/pdf-merge-preview.svg" width="1200" height="900" alt="PDF Merge Tool interface preview" loading="eager" decoding="async" fetchpriority="high">
+                </a>
+                <div class="work-panel-body">
+                  <p class="work-count">01 / 03</p>
+                  <h3>PDF Merge Tool</h3>
+                  <p>A browser-based utility for combining PDFs with drag-and-drop ordering and local file processing.</p>
+                  <p class="work-stack">HTML &middot; CSS &middot; JavaScript</p>
+                  <div class="project-actions" aria-label="PDF Merge Tool links">
+                    <a class="project-action project-action-primary" href="https://samharrisnyc.github.io/pdf-merge/" target="_blank" rel="noopener">View Live</a>
+                    <a class="project-action" href="https://github.com/samharrisnyc/pdf-merge" target="_blank" rel="noopener">View Code</a>
+                  </div>
+                </div>
+              </article>
 
-            <div class="featured-project-body">
-              <p class="dir-panel-label">Why it stands out</p>
-              <p class="featured-project-text">This is the strongest piece of front-end proof in the portfolio because it solves a specific problem with a straightforward interface and keeps the whole workflow in the browser.</p>
-              <ul class="dir-proof-list">
-                <li>Builds around a clear utility instead of a generic landing page pattern.</li>
-                <li>Uses drag-and-drop interaction and reordering without overcomplicating the UI.</li>
-                <li>Keeps the experience focused, lightweight, and easy to understand quickly.</li>
-              </ul>
-              <div class="project-actions" aria-label="PDF Merge Tool links">
-                <a class="project-action project-action-primary" href="https://samharrisnyc.github.io/pdf-merge/" target="_blank" rel="noopener">View Live</a>
-                <a class="project-action" href="https://github.com/samharrisnyc/pdf-merge" target="_blank" rel="noopener">View Code</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="project-section secondary-projects" aria-labelledby="selected-projects-title">
-          <div class="section-intro">
-            <p class="eyebrow">More Projects</p>
-            <h2 id="selected-projects-title" class="section-title">Additional work.</h2>
-            <p class="lede">The rest of the portfolio shows broader front-end range across dashboard UI and image-led presentation.</p>
-          </div>
-
-          <div class="project-directory" role="list">
-            <div class="dir-head" aria-hidden="true">
-              <span class="dir-h-no">#</span>
-              <span class="dir-h-thumb">Preview</span>
-              <span class="dir-h-main">Project</span>
-              <span class="dir-h-meta">Stack / Actions</span>
-              <span class="dir-h-arrow"></span>
-            </div>
-
-            <details class="dir-item" id="project-patient-dashboard" role="listitem" open>
-              <summary class="dir-summary">
-                <span class="dir-no" aria-hidden="true"></span>
-                <span class="dir-thumb">
+              <article class="work-panel" id="panel-patient-dashboard" data-project-panel="patient-dashboard" aria-labelledby="tab-patient-dashboard" hidden>
+                <a class="work-media" href="https://samharrisnyc.github.io/patient-health-dashboard/" target="_blank" rel="noopener" aria-label="Open Patient Health Dashboard live project">
                   <picture>
                     <source srcset="assets/images/patient-dashboard.webp" type="image/webp">
-                    <img src="assets/images/patient-dashboard.png" width="1906" height="955" alt="Patient Health Dashboard screenshot" loading="lazy" decoding="async" sizes="(max-width: 640px) 96px, (max-width: 980px) 110px, 120px">
+                    <img src="assets/images/patient-dashboard.png" width="1906" height="955" alt="Patient Health Dashboard screenshot" loading="lazy" decoding="async">
+                  </picture>
+                </a>
+                <div class="work-panel-body">
+                  <p class="work-count">02 / 03</p>
+                  <h3>Patient Health Dashboard</h3>
+                  <p>Dashboard interface for viewing health data with structured navigation and Chart.js visualizations.</p>
+                  <p class="work-stack">HTML &middot; CSS &middot; JavaScript &middot; Chart.js</p>
+                  <div class="project-actions" aria-label="Patient Health Dashboard links">
+                    <a class="project-action project-action-primary" href="https://samharrisnyc.github.io/patient-health-dashboard/" target="_blank" rel="noopener">View Live</a>
+                    <a class="project-action" href="https://github.com/samharrisnyc/patient-health-dashboard" target="_blank" rel="noopener">View Code</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="work-panel" id="panel-photo-portfolio" data-project-panel="photo-portfolio" aria-labelledby="tab-photo-portfolio" hidden>
+                <a class="work-media" href="https://samharrisnyc.github.io/photoportfolio/" target="_blank" rel="noopener" aria-label="Open Photography Portfolio live project">
+                  <img src="assets/images/photo-preview.jpg" width="356" height="480" alt="Photography portfolio preview" loading="lazy" decoding="async">
+                </a>
+                <div class="work-panel-body">
+                  <p class="work-count">03 / 03</p>
+                  <h3>Photography Portfolio</h3>
+                  <p>Minimal image portfolio with a lightbox and responsive gallery layout for content-led presentation.</p>
+                  <p class="work-stack">HTML &middot; CSS &middot; JavaScript</p>
+                  <div class="project-actions" aria-label="Photography Portfolio links">
+                    <a class="project-action project-action-primary" href="https://samharrisnyc.github.io/photoportfolio/" target="_blank" rel="noopener">View Live</a>
+                    <a class="project-action" href="https://github.com/samharrisnyc/photoportfolio" target="_blank" rel="noopener">View Code</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="work-tabs" role="tablist" aria-label="Select a project">
+              <button class="work-tab is-active" id="tab-pdf-merge" type="button" role="tab" aria-selected="true" aria-controls="panel-pdf-merge" data-project-tab="pdf-merge">
+                <span class="work-tab-image">
+                  <img src="assets/images/pdf-merge-preview.svg" width="1200" height="900" alt="" loading="lazy" decoding="async">
+                </span>
+                <span class="work-tab-copy">
+                  <span class="work-tab-kicker">Utility</span>
+                  <span class="work-tab-title">PDF Merge Tool</span>
+                  <span class="work-tab-desc">Focused file workflow in the browser.</span>
+                </span>
+              </button>
+
+              <button class="work-tab" id="tab-patient-dashboard" type="button" role="tab" aria-selected="false" aria-controls="panel-patient-dashboard" data-project-tab="patient-dashboard" tabindex="-1">
+                <span class="work-tab-image">
+                  <picture>
+                    <source srcset="assets/images/patient-dashboard.webp" type="image/webp">
+                    <img src="assets/images/patient-dashboard.png" width="1906" height="955" alt="" loading="lazy" decoding="async">
                   </picture>
                 </span>
-                <span class="dir-main">
-                  <span class="dir-title">Patient Health Dashboard</span>
-                  <span class="dir-desc">Dashboard interface for viewing health data with Chart.js visualizations. Strongest proof: handling denser UI while keeping navigation and data presentation readable.</span>
-                  <span class="dir-proof">Value: data UI, charts, denser application layout.</span>
+                <span class="work-tab-copy">
+                  <span class="work-tab-kicker">Dashboard</span>
+                  <span class="work-tab-title">Patient Health Dashboard</span>
+                  <span class="work-tab-desc">Charts and denser interface layout.</span>
                 </span>
-                <span class="dir-meta">
-                  <span class="dir-stack">HTML &middot; CSS &middot; JavaScript &middot; Chart.js</span>
-                  <span class="dir-actions-preview">View Live / Code</span>
-                </span>
-                <span class="dir-arrow" aria-hidden="true">&rsaquo;</span>
-              </summary>
+              </button>
 
-              <div class="dir-panel">
-                <div class="dir-panel-grid">
-                  <a class="dir-panel-media" href="https://samharrisnyc.github.io/patient-health-dashboard/" target="_blank" rel="noopener" aria-label="Open Patient Health Dashboard live project">
-                    <picture>
-                      <source srcset="assets/images/patient-dashboard.webp" type="image/webp">
-                      <img src="assets/images/patient-dashboard.png" width="1906" height="955" alt="Larger Patient Health Dashboard preview" loading="lazy" decoding="async">
-                    </picture>
-                  </a>
-                  <div class="dir-panel-body">
-                    <p class="dir-panel-label">Case Study</p>
-                    <p class="dir-panel-text">This is the strongest example of handling a more application-like interface: charts, structured content, and a heavier information load without losing basic usability.</p>
-                    <ul class="dir-proof-list">
-                      <li>Works with chart-based UI instead of a purely static marketing page.</li>
-                      <li>Demonstrates structured layout for denser data views.</li>
-                      <li>Shows comfort with external front-end libraries while keeping the page understandable.</li>
-                    </ul>
-                    <div class="project-actions" aria-label="Patient Health Dashboard links">
-                      <a class="project-action project-action-primary" href="https://samharrisnyc.github.io/patient-health-dashboard/" target="_blank" rel="noopener">View Live</a>
-                      <a class="project-action" href="https://github.com/samharrisnyc/patient-health-dashboard" target="_blank" rel="noopener">View Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </details>
-
-            <details class="dir-item" id="project-photo-portfolio" role="listitem">
-              <summary class="dir-summary">
-                <span class="dir-no" aria-hidden="true"></span>
-                <span class="dir-thumb">
-                  <img src="assets/images/photo-preview.jpg" width="356" height="480" alt="Photography portfolio preview" loading="lazy" decoding="async" sizes="(max-width: 640px) 96px, (max-width: 980px) 110px, 120px">
+              <button class="work-tab" id="tab-photo-portfolio" type="button" role="tab" aria-selected="false" aria-controls="panel-photo-portfolio" data-project-tab="photo-portfolio" tabindex="-1">
+                <span class="work-tab-image">
+                  <img src="assets/images/photo-preview.jpg" width="356" height="480" alt="" loading="lazy" decoding="async">
                 </span>
-                <span class="dir-main">
-                  <span class="dir-title">Photography Portfolio</span>
-                  <span class="dir-desc">Minimal gallery with a lightbox and responsive image layout. Useful proof of visual restraint, image presentation, and a content-first page structure.</span>
-                  <span class="dir-proof">Value: visual layout, image presentation, content-first design.</span>
+                <span class="work-tab-copy">
+                  <span class="work-tab-kicker">Gallery</span>
+                  <span class="work-tab-title">Photography Portfolio</span>
+                  <span class="work-tab-desc">Image-led layout and lightbox.</span>
                 </span>
-                <span class="dir-meta">
-                  <span class="dir-stack">HTML &middot; CSS &middot; JavaScript</span>
-                  <span class="dir-actions-preview">View Live / Code</span>
-                </span>
-                <span class="dir-arrow" aria-hidden="true">&rsaquo;</span>
-              </summary>
-
-              <div class="dir-panel">
-                <div class="dir-panel-grid">
-                  <a class="dir-panel-media" href="https://samharrisnyc.github.io/photoportfolio/" target="_blank" rel="noopener" aria-label="Open Photography Portfolio live project">
-                    <img src="assets/images/photo-preview.jpg" width="356" height="480" alt="Larger Photography Portfolio preview" loading="lazy" decoding="async">
-                  </a>
-                  <div class="dir-panel-body">
-                    <p class="dir-panel-label">Case Study</p>
-                    <p class="dir-panel-text">This project supports the portfolio by showing taste in image presentation and simple interaction design. It is a better fit for content-led web design work than for an app-heavy product role.</p>
-                    <ul class="dir-proof-list">
-                      <li>Prioritizes composition, spacing, and image handling.</li>
-                      <li>Uses a responsive gallery pattern without visual noise.</li>
-                      <li>Demonstrates care with presentation-focused front-end work.</li>
-                    </ul>
-                    <div class="project-actions" aria-label="Photography Portfolio links">
-                      <a class="project-action project-action-primary" href="https://samharrisnyc.github.io/photoportfolio/" target="_blank" rel="noopener">View Live</a>
-                      <a class="project-action" href="https://github.com/samharrisnyc/photoportfolio" target="_blank" rel="noopener">View Code</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </details>
+              </button>
+            </div>
           </div>
         </section>
       </div>
