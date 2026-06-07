@@ -54,6 +54,14 @@ body{
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+body.page-about,
+body.page-resume{
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+body.page-about main,
+body.page-resume main{ flex: 1; }
 img,
 picture{
   display: block;
@@ -225,6 +233,17 @@ h1{
   border-color: color-mix(in oklab, var(--accent), var(--ink) 20%);
   background: var(--panel-strong);
 }
+.btn-primary{
+  border-color: var(--rule-strong);
+  background: var(--ink);
+  color: var(--bg);
+}
+.btn-primary:hover,
+.btn-primary:focus-visible{
+  color: #fff;
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
 
 /* ========== Home ========== */
 .page-projects .section{
@@ -339,6 +358,7 @@ h1{
   background: var(--panel-strong);
   box-shadow: 0 18px 34px rgba(20,19,19,.075);
   position: relative;
+  background-image: none;
 }
 .work-media::before{
   content: "";
@@ -423,6 +443,7 @@ h1{
   text-align: left;
   font: inherit;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
   transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
 }
 .work-tab:hover{
@@ -436,7 +457,7 @@ h1{
   outline-offset: 3px;
 }
 .work-tab.is-active{
-  border-color: var(--rule-strong);
+  border-color: color-mix(in oklab, var(--accent), var(--rule-strong) 42%);
   background: var(--panel-strong);
   box-shadow: 0 1px 0 rgba(255,255,255,.76) inset;
 }
@@ -473,7 +494,7 @@ h1{
   line-height: 1.2;
 }
 
-/* ========== Project Directory ========== */
+/* ========== Project Actions ========== */
 .project-directory{
   border-top: 1px solid var(--rule-strong);
   border-bottom: 1px solid var(--rule-strong);
@@ -728,12 +749,6 @@ h1{
 }
 
 /* ========== About ========== */
-body.page-about{
-  min-height: 100svh;
-  display: flex;
-  flex-direction: column;
-}
-.page-about main{ flex: 1; }
 .page-about .section{
   padding-block: clamp(10px, 1.6vw, 18px);
 }
@@ -821,6 +836,50 @@ body.page-about{
   line-height: 1.35;
 }
 
+/* ========== Resume ========== */
+.page-resume .section{
+  padding-block: clamp(18px, 3.8vw, 48px);
+}
+.resume-layout{
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) minmax(0, 1fr);
+  gap: clamp(22px, 4vw, 42px);
+  align-items: start;
+}
+.resume-copy{
+  display: grid;
+  gap: 10px;
+  position: sticky;
+  top: 68px;
+}
+.resume-copy h1{
+  margin-bottom: 0;
+  font-size: clamp(2.35rem, 4vw, 4rem);
+}
+.resume-copy .lede{
+  max-width: 34ch;
+  font-size: .94rem;
+  line-height: 1.5;
+}
+.resume-actions{
+  margin-top: 8px;
+}
+.resume-preview{
+  min-height: min(76vh, 900px);
+  overflow: hidden;
+  border: 1px solid var(--rule-strong);
+  border-radius: 8px;
+  background: var(--panel-strong);
+  box-shadow: 0 18px 34px rgba(20,19,19,.075);
+}
+.resume-preview iframe{
+  display: block;
+  width: 100%;
+  min-height: min(76vh, 900px);
+  border: 0;
+  background: #fff;
+}
+
 /* ========== Footer ========== */
 .site-footer{
   border-top: 1px solid var(--rule-strong);
@@ -879,6 +938,10 @@ body.page-about{
     align-content: start;
   }
 
+  .work-media{
+    aspect-ratio: 4 / 3;
+  }
+
   .about-layout{
     gap: var(--s2);
   }
@@ -890,7 +953,8 @@ body.page-about{
   .featured-project-card,
   .work-panel,
   .dir-panel-grid,
-  .about-layout{
+  .about-layout,
+  .resume-layout{
     grid-template-columns: 1fr;
   }
 
@@ -917,11 +981,11 @@ body.page-about{
   }
 
   .work-tabs{
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .work-tab{
-    min-height: 112px;
+    min-height: 88px;
   }
 
   .dir-head{ display: none; }
@@ -959,6 +1023,13 @@ body.page-about{
   .about-skills-grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .resume-copy{
+    position: static;
+  }
+  .resume-copy .lede{
+    max-width: 58ch;
+  }
 }
 
 @media (max-width: 640px){
@@ -968,7 +1039,8 @@ body.page-about{
   }
 
   .site-header .container{
-    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 8px 16px;
     padding-block: 12px;
   }
@@ -985,6 +1057,11 @@ body.page-about{
 
   .work-tabs{
     grid-template-columns: 1fr;
+  }
+
+  .work-panel-body > p:not(.work-count):not(.work-stack){
+    font-size: .9rem;
+    line-height: 1.45;
   }
 
   .dir-summary{
@@ -1012,6 +1089,11 @@ body.page-about{
   }
   .about-skills-grid{
     grid-template-columns: 1fr;
+  }
+
+  .resume-preview,
+  .resume-preview iframe{
+    min-height: 68vh;
   }
 }
 
@@ -1093,6 +1175,10 @@ body.page-about{
 
   .project-action{
     width: 100%;
+  }
+
+  .resume-actions .btn{
+    flex-basis: 100%;
   }
 
   .about-skill-group{
