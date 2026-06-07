@@ -835,6 +835,7 @@ h1{
   }
 
   .project-action{
+    flex: none;
     width: 100%;
   }
 
