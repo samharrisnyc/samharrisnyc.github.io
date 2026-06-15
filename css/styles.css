@@ -642,12 +642,17 @@ h1{
 /* ========== Footer ========== */
 .site-footer{
   border-top: 1px solid var(--rule-strong);
-  padding-block: 6px;
+  padding-block: 4px;
   background: rgba(255,255,255,.22);
+}
+.site-footer small{
+  display: block;
+  font-size: .78rem;
+  line-height: 1.35;
 }
 .page-about .site-footer{
   margin-top: auto;
-  padding-block: 6px;
+  padding-block: 4px;
 }
 
 /* ========== Responsive ========== */
@@ -787,7 +792,7 @@ h1{
     gap: 10px;
   }
   .site-footer{
-    padding-block: var(--s1);
+    padding-block: 4px;
   }
   .about-skills-grid{
     grid-template-columns: 1fr;
